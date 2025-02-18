@@ -1,15 +1,15 @@
 # Backend (Spring Boot)
-back/target/
-back/.mvn/
-back/*.iml
-back/.idea/
-back/logs/
-back/*.log
+book-management-backend/target/
+book-management-backend/.mvn/
+book-management-backend/*.iml
+book-management-backend/.idea/
+book-management-backend/logs/
+book-management-backend/*.log
 
 # Frontend (Java Swing)
-front/out/
-front/*.iml
-front/.idea/
+book-management-frontend/out/
+book-management-frontend/*.iml
+book-management-frontend/.idea/
 
 # Général
 *.class
