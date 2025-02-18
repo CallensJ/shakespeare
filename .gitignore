@@ -1,0 +1,17 @@
+# Backend (Spring Boot)
+back/target/
+back/.mvn/
+back/*.iml
+back/.idea/
+back/logs/
+back/*.log
+
+# Frontend (Java Swing)
+front/out/
+front/*.iml
+front/.idea/
+
+# Général
+*.class
+*.log
+*.DS_Store
