@@ -23,12 +23,14 @@ public class BookController {
 
     @GetMapping
     public BooksList<Book> getAllBooks() {
-        return bookService.getAllBooks();
+        return bookService.findAll();
     }
 
         @GetMapping("/{id}")
     public Book getBookById(@PathVariable int id) {
         return bookService.getBookById(id);
     }
+
+
 
 }
