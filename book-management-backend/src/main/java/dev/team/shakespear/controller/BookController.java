@@ -1,16 +1,12 @@
 package dev.team.shakespear.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import dev.team.shakespear.model.Book;
 import dev.team.shakespear.service.BookService;
 
 import java.util.List;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/books")
@@ -22,15 +18,22 @@ public class BookController {
     }
 
     @GetMapping
-    public BooksList<Book> getAllBooks() {
-        return bookService.findAll();
+    public List<Book> getAllBooks() {
+        return bookService.getAllBooks();
     }
 
-        @GetMapping("/{id}")
-    public Book getBookById(@PathVariable int id) {
+    @GetMapping("/{id}")
+    public Optional<Book> getBookById(@PathVariable int id) {
         return bookService.getBookById(id);
     }
 
+    @PostMapping
+    public Book createBook(@RequestBody Book book) {
+        return bookService.saveBook(book);
+    }
 
-
+    @DeleteMapping("/{id}")
+    public void deleteBook(@PathVariable int id) {
+        bookService.deleteBook(id);
+    }
 }
