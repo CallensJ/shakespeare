@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="/styles.css">
+    <title>gestion</title>
 </head>
 <body>
-    
+    <h2 class="text-center">Gestion des Livres 📚</h2>
+
+    <section>
+        <!-- Formulaire d'ajout -->
+        <form id="bookForm">
+            <div>
+                <label for="title" class="form-label">Titre</label>
+                <input type="text" id="title" class="form-control" required>
+            </div>
+            <div>
+                <label for="author" class="form-label">Auteur</label>
+                <input type="text" id="author" class="form-control" required>
+            </div>
+            <div>
+                <label for="publishedYear" class="form-label">Date de publication</label>
+                <input type="number" id="publishedYear" class="form-control" required>
+            </div>
+            <div>
+                <label for="price" class="form-label">Prix</label>
+                <input type="number" id="price" class="form-control" required>
+            </div>
+            <button type="submit" class="btn">Ajouter le Livre</button>
+        </form>
+
+        <h3>Livres enregistrés</h3>
+        <table class="book-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Date de publication</th>
+                    <th>Prix (€)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookList">
+               
+            </tbody>
+        </table>
+    </section>
+
+    <script src="/script.js" defer></script>
 </body>
 </html>

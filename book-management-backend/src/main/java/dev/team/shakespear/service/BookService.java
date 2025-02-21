@@ -1,10 +1,7 @@
 package dev.team.shakespear.service;
-
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Service;
-
 import dev.team.shakespear.model.Book;
 import dev.team.shakespear.repository.BookRepository;
 
